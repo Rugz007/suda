@@ -1,5 +1,5 @@
 const calculatePosition = (
-  e: React.MouseEvent<HTMLCanvasElement, MouseEvent>,
+  e: React.PointerEvent<HTMLCanvasElement>,
   parentReference: React.MutableRefObject<HTMLDivElement | null>,
 ) => {
   if (!parentReference.current) return { x: 0, y: 0 };

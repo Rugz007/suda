@@ -14,7 +14,9 @@ function App() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const parentRef = useRef<HTMLDivElement | null>(null);
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
-  const [currentTool, setCurrentTool] = useState<"pencil" | "select" | "rectangle" | "circle" | "eraser">("pencil");
+  const [currentTool, setCurrentTool] = useState<
+    "pencil" | "select" | "rectangle" | "circle" | "eraser"
+  >("pencil");
   const [elements, setElements] = useState<SElement[]>([]);
   const [action, setAction] = useState<
     "drawing" | "moving" | "resizing" | "none"
@@ -22,9 +24,8 @@ function App() {
   const [selectedElement, setSelectedElement] =
     useState<SelectedElement | null>(null);
 
-  const handleMouseDown = (
-    e: React.MouseEvent<HTMLCanvasElement, MouseEvent>
-  ) => {
+  const handleMouseDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    e.preventDefault();
     const { x, y } = calculatePosition(e, parentRef);
 
     if (currentTool === "select") {
@@ -52,9 +53,9 @@ function App() {
     setAction("none");
   };
 
-  const handleMouseMoving = (
-    e: React.MouseEvent<HTMLCanvasElement, MouseEvent>
-  ) => {
+  const handleMouseMoving = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    e.preventDefault();
+
     const { x, y } = calculatePosition(e, parentRef);
 
     if (currentTool === "select") {
@@ -87,7 +88,7 @@ function App() {
     id: number,
     x2: number,
     y2: number,
-    color: string
+    color: string,
   ) => {
     const copyElementsState = [...elements];
     if (copyElementsState[id].points) {
@@ -100,12 +101,14 @@ function App() {
     setElements(copyElementsState);
   };
 
-  const onSidebarClick = (tool: "pencil" | "select" | "rectangle" | "circle" | "eraser" | "save") => {
+  const onSidebarClick = (
+    tool: "pencil" | "select" | "rectangle" | "circle" | "eraser" | "save",
+  ) => {
     if (tool == "save") {
       // TODO: save the canvas
       return;
     }
-    
+
     setCurrentTool(tool);
   };
 
