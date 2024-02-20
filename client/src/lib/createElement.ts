@@ -1,11 +1,11 @@
-import rough from "roughjs/bin/rough";
+// import rough from "roughjs/bin/rough";
 
 export const createElement = (
   id: number,
   x1: number,
   y1: number,
-  x2: number,
-  y2: number,
+  _x2: number,
+  _y2: number,
   type: string,
   color: string,
 ) => {

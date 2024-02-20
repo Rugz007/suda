@@ -3,7 +3,9 @@ import { MousePointer2, Pen, Square, Circle, Eraser, Save } from "lucide-react";
 
 interface SidebarProps {
   current: string;
-  onClick: (e: string) => void;
+  onClick: (
+    e: "pencil" | "select" | "rectangle" | "circle" | "eraser" | "save"
+  ) => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ current, onClick }) => {

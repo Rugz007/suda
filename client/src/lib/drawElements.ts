@@ -18,7 +18,7 @@ const getSvgPathFromStroke = (stroke: number[][]) => {
 };
 
 const drawElements = (
-  roughCanvas: RoughCanvas,
+  _roughCanvas: RoughCanvas,
   context: CanvasRenderingContext2D,
   element: SElement,
 ) => {
