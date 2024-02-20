@@ -1,6 +1,6 @@
-# Suda - A Fancy Drawing App 🎨
+# Suda - A Drawing App 🎨
 
-Suda is a light-weight drawing app.
+Suda is a light-weight drawing app (name inspired by the elephant Suda who can draw).
 
 ## Built with
 - React
