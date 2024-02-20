@@ -140,9 +140,9 @@ function App() {
         <canvas
           id="suda-canvas"
           ref={canvasRef}
-          onMouseUp={handleMouseUp}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMoving}
+          onPointerUp={handleMouseUp}
+          onPointerDown={handleMouseDown}
+          onPointerMove={handleMouseMoving}
         />
       </div>
     </>
