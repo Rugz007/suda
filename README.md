@@ -11,16 +11,16 @@ Suda is a light-weight drawing app (name inspired by the elephant Suda who can d
 ## Roadmap
 - [x] Basic drawing functionality
 - [x] Move drawings
-- [] Shapes (Rectangle, Circle, Polygon and Arrows)
-- [] Text
-- [] Images
-- [] Color picker
-- [] Resize drawings
-- [] Undo/Redo
-- [] Save drawings
-- [] Load drawings
-- [] Export drawings
-- [] Collaboration
+- [ ] Shapes (Rectangle, Circle, Polygon and Arrows)
+- [ ] Text
+- [ ] Images
+- [ ] Color picker
+- [ ] Resize drawings
+- [ ] Undo/Redo
+- [ ] Save drawings
+- [ ] Load drawings
+- [ ] Export drawings
+- [ ] Collaboration
 
 
 
